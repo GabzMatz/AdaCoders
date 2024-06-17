@@ -1,0 +1,38 @@
+create table tabela1(
+	id_nome varchar(12)    ====> aco q era assim
+)
+
+
+
+
+select * from disciplinas =======> comando pra mostrar tudo na tabela
+
+
+insert into disciplinas values    =========
+('item1',item2,'item3'),   ========> colocar valores na coluna
+('item4',item5,'item6'); =============
+
+
+
+copy disciplinas(id_disciplinas, nome, ementa)
+from 'C:/'		===========================   
+delimiter ',' ======================> mandando de um csv
+csv heade   =============> esse comando tira a primeira linha do arquivo csv
+
+
+update disciplinas set nome = 'alguma coisa' ======
+where id_disciplinas = 2    ==========> forma de atualizar
+
+
+delete from disciplinas   ======
+where id_chave_primaria = 2    ========> forma de apagar
+
+
+crate view nome_sigilo as 	=============
+(select nome  from disciplinas)   ===========> forma de fazer um views(pode ter mais opcoes)
+
+
+
+--create index idx_nome on disciplinas(nome) 	=======> forma de usar index
+
+
